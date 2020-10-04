@@ -1,0 +1,116 @@
+/* Team Carousel */
+#team-carousel {
+    @include xl-min {
+        padding-bottom: 120px;
+    }
+
+    .team-title {
+        h1 {
+            font-size: 30px;
+            margin-bottom: 60px;
+            color: #0e3537;
+            font-weight: 400;
+
+            span {
+                font-weight: 700;
+                display: block;
+            }
+        }
+    }
+
+    .team-items {
+        .team-single {
+            @include md-min {
+                border-right: 1px solid #e3e5ea;
+            }
+
+            padding-right: 30px;
+            transition: .5s;
+
+
+            .team-img {}
+
+            .team-content {
+                color: #152048;
+
+                h3 {
+                    font-size: 13px;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+
+                a.team-btn {
+                    color: #00a2ff;
+                    font-size: 11px;
+                    margin-top: .8rem;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                    i.fa {
+                        border: 2px solid;
+                        border-radius: 50%;
+                        width: 20px;
+                        text-align: center;
+                        height: 20px;
+                        line-height: 16px;
+                        font-size: 10px;
+                        padding-left: 2px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .opacity-half {
+            .team-single {
+                border-right-color: #fff;
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background-image: linear-gradient(to right, rgba(255, 255, 255, .75), rgba(255, 255, 255, .95));
+                    content: " ";
+                }
+            }
+        }
+    }
+
+    .owl-nav {
+
+        .owl-prev {
+            display: none;
+        }
+
+        .owl-next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            font-size: 30px;
+            width: 32px;
+            height: 32px;
+            border: 2px solid;
+            border-radius: 50%;
+            margin-top: -16px;
+            font-weight: 700;
+
+            span {
+                position: absolute;
+                top: 48%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding-left: 3px;
+
+            }
+        }
+    }
+}

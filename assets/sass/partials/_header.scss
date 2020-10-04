@@ -1,0 +1,165 @@
+/* Header Section */
+header#header-section {
+    .header-top {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #0e3537;
+
+        p {
+            font-size: 14pt;
+
+            @include tab-max {
+                font-size: 12pt;
+            }
+
+            @include mobile-max {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .logo-menu {
+        >.container {
+            border-bottom: 1px solid #EFEFEF;
+            min-height: 80px;
+
+            @include xl-min {
+                min-height: 80px;
+                padding-bottom: .8rem;
+            }
+
+            nav.main-menu {
+                ul {
+                    @include rwd-min(1200) {
+                        margin-left: 70px;
+                    }
+
+                    @include rwd-min(1300) {
+                        margin-left: 115px;
+                    }
+                }
+            }
+
+            &.menu-open {
+                .nav-toggle-btn {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+
+        .nav-toggle-btn {
+            @include lg-max {
+                font-size: 35px;
+                transition: .5s;
+                cursor: pointer;
+            }
+        }
+
+        nav.main-menu {
+            @include lg-max {
+                padding-bottom: 20px;
+            }
+
+            text-transform: uppercase;
+
+            @include xl-min {
+                margin-bottom: 5px;
+                transition: all 0s;
+            }
+
+            @include lg-max {
+                display: none;
+            }
+
+
+            a {
+                @include lg-max {
+                    padding: 10px 0;
+                    display: block;
+                    border-bottom: 1px solid rgba(#000, .05);
+                    font-weight: 700;
+                }
+
+                &:hover {
+                    color: #4fbdc4;
+                }
+            }
+
+            ul {
+                transition: .4s;
+
+                li {
+                    @include lg-min {
+                        margin-right: 3rem;
+                    }
+
+                    a {
+                        color: #2a2a2a;
+                        font-weight: 700;
+                        font-size: 13px;
+                        display: flex;
+                        align-items: center;
+                        
+                        img {
+                            margin-right: 8px;
+                            max-width: 20px;
+                        }
+                    }
+                }
+            }
+
+            .register-login {
+                @include lg-max {
+                    margin-top: 30px;
+                }
+
+                a {
+                    color: #83899e;
+                    font-weight: 500;
+                    font-size: 13px;
+                    display: flex;
+                    align-items: center;
+
+                    &:last-child {
+                        color: #2a2a2a;
+
+                        @include xl-min {
+                            margin-left: 11px;
+                        }
+                        @include lg-max {
+                            border-bottom: 0;
+                        }
+                        img {
+                            margin-right: 5px;
+                        }
+                        span {
+                            position: relative;
+                            display: inline-block;
+
+                            &:after {
+                                position: absolute;
+                                height: 6px;
+                                width: 100%;
+                                bottom: 0;
+                                content: " ";
+                                left: 0;
+                                background: rgba(79, 189, 196, .5);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        color: #4fbdc4;
+                    }
+
+                    i.fas {
+                        margin-right: 10px;
+                        color: #4fbdc4;
+                    }
+                }
+            }
+        }
+
+    }
+}

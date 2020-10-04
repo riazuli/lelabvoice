@@ -1,0 +1,99 @@
+footer#footer-section {
+    .footer-widgets {
+        padding: 30px 0;
+        @include md-max {
+            padding: 80px 0;
+        }
+        [class*=col-] {
+            margin: 50px 0;
+            @include rwd-max(991) {
+                margin: 50px 0; 
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            
+        }
+        * {
+            color: #fff;
+        }
+        font-size: 15px;
+        background: url('../images/widgets-bg.jpg') no-repeat center center / cover;
+        color: #fff;
+
+        .widget-logo {
+            margin-bottom: 25px;
+            & + p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+        .widget-links {
+            ul {
+                li {
+                    a {
+                        padding: 6px 0;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .widget-contact-info {
+            a {
+                font-size: 13px;
+                &:first-child {
+                    margin-bottom: 15px;
+                }
+                i.fa {
+                    margin-right: 10px;
+                }
+            }
+        }
+        h3.widget-title {
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        p.newsletter-para {
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+        .widget-subscribe {
+            form {
+                input[type=text] {
+                    border: 1px solid #e5eaed;
+                    color: #111;
+                    &::placeholder {
+                        color: #e1e1e1;
+                        font-size: 11px;
+                        font-weight: 300;
+                    }
+                    &:focus {
+                        border-color: #80bdff;
+                    }
+                }
+                button {
+                    color: #0e3537;
+                    flex: 0 0 120px;
+                    font-size: 12pt;
+                    font-weight: 500;
+                    i {
+                        color: #0e3537;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+    .copyright {
+        background: #0e3537;
+        padding: 15px 0;
+        p {
+            color: #fff;
+            font-size: 11px;
+        }
+    }
+}

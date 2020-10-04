@@ -1,0 +1,29 @@
+/* About Section */
+section#about-section {
+    >.container {
+        padding: 80px 15px;
+       
+    }
+
+    .about-content {
+        h2 {
+            color: #0e3537;
+            font-size: 30px;
+            font-weight: 400;
+            @include tab-max {
+                margin-top: 80px;
+            }
+
+            strong {
+                display: block;
+            }
+        }
+
+        p {
+            color: #152048;
+            font-size: 20px;
+            line-height: 27px;
+            margin-top: 14px;
+        }
+    }
+}
