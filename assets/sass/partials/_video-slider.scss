@@ -126,9 +126,6 @@ section#video-slider {
                     margin-right: auto;
                     cursor: pointer;
                     margin-bottom: 15px;
-
-                    i.fa {}
-
                     &+p {
                         font-size: 14px;
                         color: #fff;
@@ -151,10 +148,6 @@ section#video-slider {
                 position: absolute;
                 left: 50%; 
                  
-            }
-
-            button.owl-prev {
-                // margin-left: -55px;
             }
         }
 
@@ -210,6 +203,4 @@ section#video-slider {
         font-size: 28px;
         line-height: 35px;
     }
-
-    a {}
 }
