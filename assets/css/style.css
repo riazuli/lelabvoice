@@ -85,12 +85,12 @@ header#header-section .header-top {
 }
 
 header#header-section .header-top p {
-  font-size: 14pt;
+  font-size: 14px;
 }
 
 @media (max-width: 767px) {
   header#header-section .header-top p {
-    font-size: 12pt;
+    font-size: 12px;
   }
 }
 
@@ -447,6 +447,25 @@ section#banner-section .banner-bottom-services .banner-bottom-content p {
 }
 
 /* About Section */
+section#about-section {
+  position: relative;
+  z-index: 1;
+}
+
+section#about-section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/calque.png);
+  z-index: -1;
+}
+
 section#about-section > .container {
   padding: 80px 15px;
 }
@@ -477,7 +496,7 @@ section#about-section .about-content p {
 /* Video Slider */
 section#video-slider {
   padding: 100px 0;
-  background-color: #f6f9f9;
+  background-color: #f7fbfb;
 }
 
 section#video-slider .video-slides {
@@ -489,7 +508,6 @@ section#video-slider .video-slides .video-slide {
   transition: .4s;
   box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.1);
   border-radius: 13px;
-  margin: 15px;
 }
 
 @media (min-width: 1300px) {
@@ -528,6 +546,12 @@ section#video-slider .video-slides .video-slide .video-content p {
 
 section#video-slider .video-slides .video-slide .video-content .rating-links .rating {
   color: #f8b84e;
+}
+
+@media (max-width: 767px) {
+  section#video-slider .video-slides .video-slide .video-content .rating-links .rating {
+    margin-bottom: 20px;
+  }
 }
 
 section#video-slider .video-slides .video-slide .video-content .rating-links .video-buttons a {
@@ -687,15 +711,213 @@ section#video-slider .video-slides .owl-dots button.active span {
   line-height: 35px;
 }
 
-/* Tab Section */
-section#tab-section {
-  background: #f7fbfb;
+#progress-section {
+  background-color: #f7fbfb;
+}
+
+#progress-section .progress-title {
+  text-align: center;
+}
+
+#progress-section .progress-title h2 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #0e3537;
+  font-weight: 400;
+}
+
+#progress-section .progress-title h2 span {
+  font-weight: 700;
+  display: block;
+}
+
+#progress-section .progress-list {
+  position: relative;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list {
+    padding-top: 0px;
+  }
+}
+
+#progress-section .progress-list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-image: url(../images/dots.png);
+  background-size: contain;
+  background-position: center right;
+  right: 210px;
+  top: 110px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #progress-section .progress-list::before {
+    right: 175px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list::before {
+    display: none;
+  }
+}
+
+#progress-section .progress-list .single-progress h4 {
+  text-transform: uppercase;
+  color: #288b91;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#progress-section .progress-list .single-progress {
+  padding: 40px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #progress-section .progress-list .single-progress {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list .single-progress {
+    padding: 20px 10px;
+  }
+  #progress-section .progress-list .single-progress .icon {
+    min-height: 155px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #progress-section .progress-list .single-progress .icon {
+    min-height: auto;
+  }
+}
+
+#progress-section .progress-list .single-progress p {
+  font-size: 13px;
+  color: #288b91;
+}
+
+#progress-section .progress-list .single-progress .content {
+  border-left: 1px solid #fce0a2;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list .single-progress .content {
+    margin-top: 15px;
+  }
+}
+
+#progress-section .progress-list .single-progress .content span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+#progress-section .progress-list .single-progress .content span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #fce0a2;
+  z-index: -1;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(1) .single-progress {
+  margin-top: -75px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #progress-section .progress-list .col-lg-3:nth-child(1) .single-progress {
+    margin-top: -60px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list .col-lg-3:nth-child(1) .single-progress {
+    margin-top: 0;
+  }
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(1) .single-progress .content {
+  border-left: 1px solid #fce0a2;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(1) .single-progress .content span:after {
+  background-color: #fce0a2;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(2) .single-progress {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list .col-lg-3:nth-child(2) .single-progress {
+    margin-top: 0;
+  }
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(2) .single-progress .content {
+  border-left: 1px solid #F6C407;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(2) .single-progress .content span:after {
+  background-color: #F6C407;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(3) .single-progress {
+  margin-top: 45px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #progress-section .progress-list .col-lg-3:nth-child(3) .single-progress {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #progress-section .progress-list .col-lg-3:nth-child(3) .single-progress {
+    margin-top: 0;
+  }
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(3) .single-progress .content {
+  border-left: 1px solid #FFAD55;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(3) .single-progress .content span:after {
+  background-color: #FFAD55;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(4) .single-progress .content {
+  border-left: 1px solid #FF7369;
+}
+
+#progress-section .progress-list .col-lg-3:nth-child(4) .single-progress .content span:after {
+  background-color: #FF7369;
 }
 
 /* Team Carousel */
 @media (min-width: 1200px) {
   #team-carousel {
     padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  #team-carousel {
+    padding-bottom: 100px;
   }
 }
 
@@ -790,9 +1012,17 @@ section#tab-section {
   font-weight: 700;
 }
 
+@media (max-width: 767px) {
+  #team-carousel .owl-nav .owl-next {
+    left: calc(50% - 16px);
+    bottom: -60px;
+    top: auto;
+  }
+}
+
 #team-carousel .owl-nav .owl-next span {
   position: absolute;
-  top: 48%;
+  top: 12px;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-left: 3px;
@@ -802,13 +1032,13 @@ section#tab-section {
 section#content-video-section {
   background: url("../images/video-bg.jpg") no-repeat center/cover;
   position: relative;
-  height: 550px;
+  min-height: 400px;
   z-index: 1;
 }
 
 @media (max-width: 767px) {
   section#content-video-section {
-    height: 420px;
+    min-height: 350px;
   }
 }
 
@@ -878,6 +1108,12 @@ section#content-video-section .content-video-text h1 span:after {
 @media (max-width: 575px) {
   section#content-video-section .content-video-text h1 span {
     font-size: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  section#content-video-section .content-video-text h1 span {
+    font-size: 22px;
   }
 }
 
@@ -1055,6 +1291,7 @@ section#content-slider .content-slider-items .owl-nav button.owl-next span.regul
 }
 
 section#content-slider .content-slider-items .opacity-half .content-slide-item:after {
+  transition: .4s;
   position: absolute;
   top: 0;
   left: 0;
@@ -1110,10 +1347,20 @@ footer#footer-section .footer-widgets .widget-logo + p {
 footer#footer-section .footer-widgets .widget-links ul li a {
   padding: 6px 0;
   font-size: 13px;
+  transition: all 0.4s ease;
+}
+
+footer#footer-section .footer-widgets .widget-links ul li a:hover {
+  color: #00A2FF;
 }
 
 footer#footer-section .footer-widgets .widget-contact-info a {
   font-size: 13px;
+  transition: all 0.4s ease;
+}
+
+footer#footer-section .footer-widgets .widget-contact-info a:hover {
+  color: #00A2FF;
 }
 
 footer#footer-section .footer-widgets .widget-contact-info a:first-child {
@@ -1152,7 +1399,7 @@ footer#footer-section .footer-widgets .widget-subscribe form input[type=text]:fo
 footer#footer-section .footer-widgets .widget-subscribe form button {
   color: #0e3537;
   flex: 0 0 120px;
-  font-size: 12pt;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -1168,6 +1415,6 @@ footer#footer-section .copyright {
 
 footer#footer-section .copyright p {
   color: #fff;
+  opacity: 0.4;
   font-size: 11px;
 }
-/*# sourceMappingURL=style.css.map */

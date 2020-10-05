@@ -91,6 +91,8 @@ $(document).ready(function () {
             loop: true,
             nav: true,
             slideBy: 3,
+            autoplay: true,
+            autoplayTimeout: 2500,
             dots: 0,
             touchDrag: 0,
             mouseDrag: 0,
@@ -101,9 +103,11 @@ $(document).ready(function () {
                 },
                 768: {
                     items: 2,
-                    slideBy: 1
+                    slideBy: 1,
+                    autoplay: false, 
                 },
                 1199: {
+                    autoplay: true, 
                     items: 4,
                     slideBy: 3
                 }
@@ -111,10 +115,8 @@ $(document).ready(function () {
         });
 
         ! function () {
-
+            
             var teamNextBtn = document.querySelector('#team-carousel .team-items button.owl-next');
-            console.log(teamNextBtn);
-
             function teamSlideOpacity() {
                 if (window.innerWidth >= 768) {
                     var activeItems = document.querySelectorAll('.team-items .owl-stage .owl-item.active');
@@ -134,7 +136,7 @@ $(document).ready(function () {
             teamNextBtn.addEventListener('click', teamSlideOpacity);
             setInterval(function () {
                 teamSlideOpacity();
-            }, 700);
+            }, 400);
 
         }()
     }
@@ -143,6 +145,7 @@ $(document).ready(function () {
     if ($('.content-slider-items').length) {
         $('.content-slider-items').owlCarousel({
             items: 4,
+            autoplay: true,
             margin: 30,
             loop: true,
             nav: true,
@@ -211,10 +214,10 @@ $(document).ready(function () {
             items: 1,
             loop: true,
             nav: true,
+            autoplay: true, 
             touchDrag: 0,
             mouseDrag: 0,
             margin: 15
-
         });
     }
 

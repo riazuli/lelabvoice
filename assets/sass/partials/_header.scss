@@ -6,10 +6,10 @@ header#header-section {
         background-color: #0e3537;
 
         p {
-            font-size: 14pt;
+            font-size: 14px;
 
             @include tab-max {
-                font-size: 12pt;
+                font-size: 12px;
             }
 
             @include mobile-max {

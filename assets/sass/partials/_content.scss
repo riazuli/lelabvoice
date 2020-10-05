@@ -2,11 +2,11 @@
 section#content-video-section {
     background: url('../images/video-bg.jpg') no-repeat center / cover;
     position: relative;
-    height: 550px;
+    min-height: 400px;
     z-index: 1;
 
     @include tab-max {
-        height: 420px;
+        min-height: 350px;
     }
 
     &:after {
@@ -71,6 +71,9 @@ section#content-video-section {
 
                 @include mobile-max {
                     font-size: 25px;
+                }
+                @include rwd-max(350) {
+                    font-size: 22px;
                 }
             }
         }
@@ -257,6 +260,7 @@ section#content-slider {
         .opacity-half {
             .content-slide-item {
                 &:after {
+                    transition: .4s;
                     position: absolute;
                     top: 0;
                     left: 0;

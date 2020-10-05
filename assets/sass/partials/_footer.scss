@@ -37,6 +37,10 @@ footer#footer-section {
                     a {
                         padding: 6px 0;
                         font-size: 13px;
+                        transition: all 0.4s ease;
+                        &:hover{
+                            color: #00A2FF;
+                        }
                     }
                 }
             }
@@ -44,6 +48,10 @@ footer#footer-section {
         .widget-contact-info {
             a {
                 font-size: 13px;
+                transition: all 0.4s ease;
+                &:hover{
+                    color: #00A2FF;
+                }
                 &:first-child {
                     margin-bottom: 15px;
                 }
@@ -77,7 +85,7 @@ footer#footer-section {
                 button {
                     color: #0e3537;
                     flex: 0 0 120px;
-                    font-size: 12pt;
+                    font-size: 12px;
                     font-weight: 500;
                     i {
                         color: #0e3537;
@@ -93,6 +101,7 @@ footer#footer-section {
         padding: 15px 0;
         p {
             color: #fff;
+            opacity: 0.4;
             font-size: 11px;
         }
     }
