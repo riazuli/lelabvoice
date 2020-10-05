@@ -499,8 +499,49 @@ section#video-slider {
   background-color: #f7fbfb;
 }
 
+@media (min-width: 1300px) {
+  section#video-slider > .container {
+    max-width: 1250px;
+    padding-left: 35px;
+  }
+}
+
 section#video-slider .video-slides {
   padding-bottom: 50px;
+  z-index: 1;
+}
+
+section#video-slider .video-slides:after, section#video-slider .video-slides:before {
+  position: absolute;
+  width: calc(100% - 65px);
+  height: calc(100% - 70px);
+  content: " ";
+  top: -12px;
+  left: -14px;
+  background: #fff url(../images/video.png) no-repeat;
+  z-index: -1;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.059);
+  border-right: 0;
+  transition: .4s;
+}
+
+@media (max-width: 767px) {
+  section#video-slider .video-slides:after, section#video-slider .video-slides:before {
+    display: none;
+  }
+}
+
+section#video-slider .video-slides:after {
+  left: -35px;
+  top: -35px;
+  z-index: -2;
+}
+
+@media (min-width: 1300px) {
+  section#video-slider .video-slides {
+    padding-right: 45px;
+  }
 }
 
 section#video-slider .video-slides .video-slide {
@@ -508,16 +549,10 @@ section#video-slider .video-slides .video-slide {
   transition: .4s;
   box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.1);
   border-radius: 13px;
-}
-
-@media (min-width: 1300px) {
-  section#video-slider .video-slides .video-slide {
-    margin-right: 45px;
-  }
+  margin: 10px;
 }
 
 section#video-slider .video-slides .video-slide:hover {
-  transform: translateY(-15px);
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -734,6 +769,7 @@ section#video-slider .video-slides .owl-dots button.active span {
 #progress-section .progress-list {
   position: relative;
   padding-top: 30px;
+  margin-right: -50px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -858,13 +894,15 @@ section#video-slider .video-slides .owl-dots button.active span {
   background-color: #fce0a2;
 }
 
-#progress-section .progress-list .col-lg-3:nth-child(2) .single-progress {
-  margin-top: 15px;
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #progress-section .progress-list .col-lg-3:nth-child(2) .single-progress {
+    margin-top: 25px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
   #progress-section .progress-list .col-lg-3:nth-child(2) .single-progress {
-    margin-top: 0;
+    margin-top: 5px;
   }
 }
 
@@ -882,7 +920,7 @@ section#video-slider .video-slides .owl-dots button.active span {
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   #progress-section .progress-list .col-lg-3:nth-child(3) .single-progress {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 

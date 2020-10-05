@@ -2,27 +2,63 @@
 section#video-slider {
     padding: 100px 0;
     background-color: #f7fbfb;
+    > .container {
+        @include rwd-min(1300) {
+            max-width: 1250px;
+            padding-left: 35px;
+        }
+    }
 
     .video-slides {
-        padding-bottom: 50px; 
+        padding-bottom: 50px;
+        z-index: 1;
+
+        &:after,
+        &:before {
+            position: absolute;
+            width: calc(100% - 65px);
+            height: calc(100% - 70px);
+            content: " ";
+            top: -12px;
+            left: -14px;
+            background:#fff url(../images/video.png) no-repeat;
+            z-index: -1;
+            // border-top-right-radius: 12px;
+            border-radius: 12px; 
+            // border-top-left-radius: 10px;
+            border: 1px solid rgba(0,0,0,.059);
+            border-right: 0;
+            transition: .4s;
+            @include tab-max {
+                display: none;
+            }
+        }
+        &:after {
+            left: -35px;
+            top: -35px;
+            z-index: -2;
+        }
+
+        .owl-stage-outer {}
+
+        @include rwd-min(1300) {
+            padding-right: 45px;
+        }
 
         .video-slide {
             background: #fff;
             transition: .4s;
             box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, .1);
             border-radius: 13px;
-
-            @include rwd-min(1300) {
-                margin-right: 45px;
-            }
+            margin: 10px;
 
             &:hover {
-                transform: translateY(-15px);
                 box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.15);
             }
 
             .video-content {
                 padding: 50px 20px 80px 30px;
+
                 @include rwd-max(1249) {
                     padding-bottom: 55px;
                 }
@@ -43,10 +79,11 @@ section#video-slider {
                 .rating-links {
                     .rating {
                         color: #f8b84e;
+
                         @include tab-max {
                             margin-bottom: 20px;
                         }
- 
+
                     }
 
                     .video-buttons {
@@ -86,11 +123,12 @@ section#video-slider {
                 z-index: 1;
                 border-top-right-radius: 13px;
                 border-bottom-right-radius: 13px;
+
                 @include tab-max {
                     min-height: 220px;
                     border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;     
-                    border-bottom-left-radius: 13px;                
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 13px;
                     border-bottom-right-radius: 13px;
                 }
 
@@ -105,10 +143,11 @@ section#video-slider {
                     height: 100%;
                     border-top-right-radius: 13px;
                     border-bottom-right-radius: 13px;
+
                     @include tab-max {
                         border-top-right-radius: 0;
                         border-bottom-right-radius: 0;
-                        border-bottom-left-radius: 13px;                
+                        border-bottom-left-radius: 13px;
                         border-bottom-right-radius: 13px;
                     }
                 }
@@ -126,6 +165,7 @@ section#video-slider {
                     margin-right: auto;
                     cursor: pointer;
                     margin-bottom: 15px;
+
                     &+p {
                         font-size: 14px;
                         color: #fff;
@@ -146,8 +186,8 @@ section#video-slider {
 
             button {
                 position: absolute;
-                left: 50%; 
-                 
+                left: 50%;
+
             }
         }
 
@@ -187,14 +227,18 @@ section#video-slider {
     @include xl-min {
         padding-left: 10px;
     }
-    color: #0e3537; 
+
+    color: #0e3537;
+
     h2 {
         font-size: 40px;
+
         @include xl-min {
             margin-top: 25px;
         }
+
         @include lg-max {
-            margin-top: 80px; 
+            margin-top: 80px;
         }
     }
 

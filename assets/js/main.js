@@ -15,6 +15,8 @@
     var navMainMenuUl = $('nav.main-menu ul');
     var registerLogin = $('nav.main-menu .register-login');
     var menuContainer = $('header#header-section .logo-menu > .container');
+    var videoSlide = $('.video-slide');
+    console.log(videoSlide);
     var logoHeight, toggleBtnHeight;
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -73,6 +75,24 @@
             navToggleBtn.style.paddingTop = '0px';
         }
     });
+
+    // videoSlide.addEventListener('click',function() {
+    //     const style = document.createElement('style');
+    //     style.className = 'hover-style'
+    //     style.innerHTML = `
+    //         section#video-slider .video-slides:after,
+    //         section#video-slider .video-slides:before {
+    //             transform: translateY(-15px);
+    //         }
+    //     `;
+    //     document.head.append(style);
+    // })
+    // videoSlide.addEventListener('mouseout',function() {
+        
+    // })
+
+    // Video slider hover
+    
 
 }();
 
@@ -220,5 +240,6 @@ $(document).ready(function () {
             margin: 15
         });
     }
+
 
 });
